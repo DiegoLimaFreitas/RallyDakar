@@ -14,5 +14,15 @@ namespace RallyDakar.Dominio.Entidades
         //Quando o sistema estiver em execução o entity framework pode carregar por demanda, mudando a instancia em tempo de execução
         public virtual Temporada Temporada { get; set; }
         public ICollection<Piloto> Pilotos { get; set; }
+
+        public bool ValidarCamposEquipe()
+        {
+            if (string.IsNullOrEmpty(Nome) && string.IsNullOrEmpty(CodigoIdentificador))
+            {
+                return false;
+            }
+            return true;
+        }
+        
     }
 }
