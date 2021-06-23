@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RallyDakar.Dominio.Entidades
 {
-    public class telemetria
+    public class Telemetria
     {
 
         public int Id { get; set; }
